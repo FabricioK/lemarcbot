@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}\\bot.js",
+            "env": {
+                "API_KEY": "AIzaSyCvjz6ZeHdrYgUB4w__0VbjpWBrufUMxFg",
+                "AUTH_DOMAIN": "lemarc-bot.firebaseapp.com",
+                "BOT_TOKEN": "NDQ2MzIwODA3NjYxMDEwOTQ1.Dd9CEA.ifn_OMeAtWp-Qo65fLmq9hkgC_U",
+                "DATABASE_URL": "https://lemarc-bot.firebaseio.com",
+                "MESSAGIN_SENDER_ID": "430726932366",
+                "PROJECT_ID": "https://lemarc-bot.firebaseio.com",
+                "STORAG_EBUCKET": "lemarc-bot.appspot.com",
+            }
+        }
+    ]
+}
