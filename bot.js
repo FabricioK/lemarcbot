@@ -28,7 +28,7 @@ var opcoes = {
     msg.channel.send(mensagemEnviada);
   },
   "e o bambu?": (s, msg) => {
-    msg.channel.send('enfia no cu <@' + msg.author.id + '>');
+    msg.channel.send('enfia no cu @' + msg.author.id + '');
   },
   "quero": (s, msg,r) => {
     /*if (msg.createdAt.getHours() >= 11 && msg.createdAt.getMinutes() >= 30) {
@@ -52,6 +52,14 @@ client.on("message", (message) => {
 
   if (message.author.bot)
     return;
+    
+  if (message.content.startsWith("!grau")) {
+      message.channel.send(" <@marlonluft#2769> ",{
+        files: [
+            "./imgs/grau.png"
+        ]
+    });
+  }
 
   if (message.content.startsWith("!lemarc")) {
     var validate = message.content.toLowerCase().substring(8);
@@ -65,7 +73,7 @@ client.on("message", (message) => {
       }
     }
 
-    message.channel.send("Me desculpe, não entendi");
+    message.channel.send("Vai se fuder");
   }
 });
 client.login(process.env.BOT_TOKEN);
