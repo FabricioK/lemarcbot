@@ -53,6 +53,14 @@ client.on("message", (message) => {
   if (message.author.bot)
     return;
     
+  if (message.content.startsWith("!primeiramente")) {
+      message.channel.send(" Fora Temer! ");
+  }
+    
+  if (message.content.startsWith("9/11")) {
+    message.channel.send(" Jet Fuel Can't Melt Steel Beams ");
+  }
+
   if (message.content.startsWith("!grau")) {
       message.channel.send(" <@marlonluft#2769> ",{
         files: [
