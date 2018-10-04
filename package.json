@@ -4,6 +4,9 @@
     "description": "Bot de pedidos do lemark",
     "main": "bot.js",
     "author": "fabricio dos santos antunes",
+    "engines": {
+        "node": "6.4.1"
+    },
     "dependencies": {
         "@tensorflow/tfjs": "^0.10.3",
         "discord.js": "^11.3.2",

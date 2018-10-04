@@ -73,7 +73,7 @@ client.on("message", (message) => {
 
   var d = Math.random();
 
-  if(d < 0.02){
+  if (d < 0.02) {
     message.channel.send("q");
   }
   /*if (message.content.startsWith("!lemarc")) {
@@ -89,6 +89,6 @@ client.on("message", (message) => {
     }   
   }*/
 
-  
+
 });
 client.login(process.env.BOT_TOKEN);
