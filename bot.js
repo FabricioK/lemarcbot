@@ -1,16 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var firebase = require("firebase");
-
-var config = {
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.AUTH_DOMAIN,
-  databaseURL: process.env.DATABASE_URL,
-  projectId: process.env.PROJECT_ID,
-  storageBucket: process.env.STORAG_EBUCKET,
-  messagingSenderId: process.env.MESSAGIN_SENDER_ID
-};
-
 
 var opcoes = {
   "help": (s, msg) => {
