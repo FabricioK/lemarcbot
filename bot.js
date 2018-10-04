@@ -1,12 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 var firebase = require("firebase");
-var Sentiment = require('sentiment');
-
-var sentiment = new Sentiment();
-var ptLanguage = require('./portugues');
-
-sentiment.registerLanguage('pt-Br', ptLanguage);
 
 var config = {
   apiKey: process.env.API_KEY,
