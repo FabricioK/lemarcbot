@@ -30,14 +30,14 @@ var opcoes = {
   "e o bambu?": (s, msg) => {
     msg.channel.send('enfia no cu @' + msg.author.id + '');
   },
-  "quero": (s, msg,r) => {
+  "quero": (s, msg, r) => {
     /*if (msg.createdAt.getHours() >= 11 && msg.createdAt.getMinutes() >= 30) {
       msg.channel.send("Achou que ainda dava tempo de fazer pedido? Achou errado Otário!");
       return;
     }*/
     if (r.score > 0) {
       msg.channel.send('Saudável ' + r.score);
-    }else{
+    } else {
       msg.channel.send('Não saudável ' + r.score);
     }
   },
@@ -46,30 +46,37 @@ var opcoes = {
 //firebase.initializeApp(config);
 
 client.on("ready", () => {
+  console.log(client.guilds.array()[0].name)
   console.log("O lemarc está pronto!");
 });
 client.on("message", (message) => {
 
   if (message.author.bot)
     return;
-    
+
+
   if (message.content.startsWith("!primeiramente")) {
-      message.channel.send(" Fora Temer! ");
+    message.channel.send(" Fora Temer! ");
   }
-    
+
   if (message.content.startsWith("9/11")) {
     message.channel.send(" Jet Fuel Can't Melt Steel Beams ");
   }
 
   if (message.content.startsWith("!grau")) {
-      message.channel.send(" <@marlonluft#2769> ",{
-        files: [
-            "./imgs/grau.png"
-        ]
+    message.channel.send(" <@marlonluft#2769> ", {
+      files: [
+        "./imgs/grau.png"
+      ]
     });
   }
 
-  if (message.content.startsWith("!lemarc")) {
+  var d = Math.random();
+
+  if(d < 0.02){
+    message.channel.send("q");
+  }
+  /*if (message.content.startsWith("!lemarc")) {
     var validate = message.content.toLowerCase().substring(8);
 
     var result = sentiment.analyze(validate, { language: 'pt-Br' });
@@ -79,9 +86,9 @@ client.on("message", (message) => {
         opcoes[opcao](validate.substring(opcao.length), message, result);
         return;
       }
-    }
+    }   
+  }*/
 
-    message.channel.send("Vai se fuder");
-  }
+  
 });
 client.login(process.env.BOT_TOKEN);
