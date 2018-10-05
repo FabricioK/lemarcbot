@@ -37,7 +37,7 @@ client.on("message", (message) => {
   if (message.author.bot)
     return;
 
-
+  Console.log(message.author);
   if (message.content.startsWith("!primeiramente")) {
     message.channel.send(" Fora Temer! ");
   }
